@@ -8,20 +8,234 @@
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
     <title></title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
     <style>
+        .index-top { width: 100%; height: 116px; overflow: hidden }
+        .index-top-more { width: 1241px; height: auto; overflow: hidden; margin: 0 auto }
+        .index-top-more-logo { float: left; margin-top: 13px; }
+        .index-top-more-search { width: 325px; height: 72px; float: right; background: url("images/2.png") no-repeat; margin-top: 45px; margin-right: 12px; }
+        .index-top-more-search input { width: 205px; height: 36px; margin-right: 6px; margin-left: 28px; margin-top: 22px; color: #838383; font-size: 20px; padding-left: 15px; background: none; border: none; }
+        .index-top-more-search button { width: 40px; height: 40px; float: right; margin-top: 22px; margin-right: 24px; background: none; border: none; }
+        .index-nav { width: 100%; height: 54px; overflow: hidden; background: url("images/1.jpg") repeat-x; }
+        .index-nav-more { width: 1241px; height: 100%; overflow: hidden; margin: 0 auto; }
+        .index-nav-more ul li a { display: block; width: 120px; height: 100%; font-size: 20px; color: #ffffff; float: left; line-height: 54px; margin-right: 104px; text-align: center; }
+        .index-banner { width: 1241px; height: auto; overflow: hidden; margin: 0 auto 30px auto; }
+        .index-company-info { width: 1241px; height: auto; overflow: hidden; margin: 0 auto 57px auto; }
+        .index-company-common { width: 409px; height: 325px; float: left; background: url("images/4.png") no-repeat; background-size: 100% 100% }
+        .index-company-common h3 { width: 331px; border-bottom: 1px dashed #000; font-size: 24px; color: #207ec2; padding-bottom: 12px; margin: 24px auto 0 auto; }
+        .index-company-common p { text-indent: 31px; width: 331px; height: auto; overflow: hidden; margin: 20px auto 35px auto; font-size: 16px; line-height: 25px; }
+        .index-company-common a { width: 180px; height: 51px; overflow: hidden; display: block; background: url("images/5.png") no-repeat; text-align: center; line-height: 48px; color: #ffffff; margin-left: 33px; }
+        .index-company-video { margin-right: 0; float: right; }
+        .index-company-introduce { margin-right: 7px; }
+        .border { width: 1241px; height: auto; overflow: hidden; margin: 0 auto; }
+        .border img { width: 100%; }
+        .company-main{ width:1241px; height:auto; overflow: hidden;margin: 20px auto 36px auto;}
+        .index-product-list,.index-case-list,.index-news-list{ width:360px; height:auto; overflow: hidden; float: left;}
+        .index-product-list>ul>li{ width:360px; overflow: hidden; min-height:60px; margin-top:20px; position: relative;}
+        .index-product-list>ul>li p{width: 100%; height:60px;background: url("images/10.png") no-repeat; cursor: pointer; position: absolute; top:0; left:0; z-index:2;}
+        .index-product-list>ul>li p span{font-size: 20px; line-height:60px; color: #ffffff; margin-left:20px; float: left;}
+        .index-product-list>ul>li p img{ float: right; margin-right:20px; margin-top:16px;}
+        .index-product-list-main{ width:100%; height:158px;background:#bce3ff; overflow: auto; border-bottom-right-radius: 10px;border-bottom-left-radius: 10px; padding-top:50px; margin-top:10px; display: none;}
+        .index-product-list-main ul li span{ margin-left:10px; margin-right:10px;}
+        .index-product-list-main a{color: #000;font-size: 20px; line-height:50px; margin-top:20px;}
+        .index-case-list{ margin-left:65px;}
+        .index-case-list h3,.index-news-list h3{ margin-bottom:20px;}
+        .index-case-list ul li{width: 100%; height:auto; overflow: hidden; margin-bottom:18px;}
+        .index-case-list ul li img{ float: left; margin-right:8px;}
+        .index-case-list ul li a span{ margin-top:3px; }
+        .index-case-list ul li a{ overflow: hidden; display: block; color: #333;}
+        .index-news-list{ float: right;}
+        .index-news-list ul li a{ color: #333333;font-size: 16px; display: block; width:100%; height:auto;text-overflow: ellipsis; white-space:nowrap; overflow: hidden; margin-bottom:15px;}
+        .index-news-list ul li a:before{ content: ''; width:10px; height:10px;background:#61baed; display: block; float: left;border-radius: 100%; margin-right:10px; margin-top:7px;}
+        .concact-we{ width:536px; height:374px; overflow: hidden; float: left;background: url("images/lianxi.jpg") no-repeat;}
+        .index-about{ width:1241px; height:auto; overflow: hidden;margin: 0 auto;}
+        .partner{ width:698px; height:367px; overflow: hidden;background: url("images/hezuo.jpg") no-repeat;}
+        .partner ul { margin-top:90px; width:625px; height:auto; overflow: hidden; margin-left:35px;}
+        .partner ul li{ float: left; width:50%; line-height:40px;}
     </style>
 </head>
 <body>
+<div class="index-top">
+    <div class="index-top-more">
+        <div class="index-top-more-logo">
+            <img src="images/15.png" alt="">
+        </div>
+        <div class="index-top-more-search">
+            <form action="">
+                <input type="text" placeholder="搜索">
+                <button type="submit"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="index-nav">
+    <div class="index-nav-more">
+        <ul>
+            <li><a href="###">集团首页</a></li>
+            <li><a href="###">关于我们</a></li>
+            <li><a href="###">新闻资讯</a></li>
+            <li><a href="###">产品中心</a></li>
+            <li><a href="###">联系我们</a></li>
+            <li><a href="###" style="margin-right:0;">诚聘英才</a></li>
+        </ul>
+    </div>
+</div>
+<div class="index-banner">
+    <img src="images/3.png" alt="">
+</div>
+<div class="index-company-info">
+    <div class="index-company-common index-company-introduce ">
+        <h3>公司简介</h3>
+        <p> 大森林信息科技公司主打的“大森林心理健康公共服务平台”，是以“构建心理健康服务体系”为目标建立的心理健康教育培训服务品牌，是心理健康服务软硬件设备及咨询师服务一体化方案解决供应商。</p>
+        <a href="###">点击查看&gt;&gt;</a>
+    </div>
+    <div class="index-company-common index-company-trends ">
+        <h3>公司动态</h3>
+        <p> 大森林信息科技公司主打的“大森林心理健康公共服务平台”，是以“构建心理健康服务体系”为目标建立的心理健康教育培训服务品牌，是心理健康服务软硬件设备及咨询师服务一体化方案解决供应商。</p>
+        <a href="###">点击查看&gt;&gt;</a>
+    </div>
+    <div class="index-company-common index-company-video ">
+        <h3>公司视频</h3>
+        <p> 大森林信息科技公司主打的“大森林心理健康公共服务平台”，是以“构建心理健康服务体系”为目标建立的心理健康教育培训服务品牌，是心理健康服务软硬件设备及咨询师服务一体化方案解决供应商。</p>
+        <a href="###">点击查看&gt;&gt;</a>
+    </div>
+</div>
+<div class="border">
+    <img src="images/6.png" alt="">
+</div>
+<div class="company-main">
+    <div class="index-product-list">
+        <h3><img src="images/7.png" alt=""></h3>
+        <ul>
+            <li>
+                <p><span>各类功能室设计简介</span> <img src="images/12.png" alt=""></p>
+                <div class="index-product-list-main" style="display:block;">
+                    <ul>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p><span>各类功能室设计简介</span> <img src="images/12.png" alt=""></p>
+                <div class="index-product-list-main">
+                    <ul>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p><span>各类功能室设计简介</span> <img src="images/12.png" alt=""></p>
+                <div class="index-product-list-main">
+                    <ul>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                        <li><a href="###"><span>&gt;</span>个体咨询站重中之重</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="index-case-list">
+        <h3><img src="images/7.png" alt=""></h3>
+        <ul>
+            <li><a href="###"><img src="images/17.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+            <li><a href="###"><img src="images/18.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+            <li><a href="###"><img src="images/19.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+            <li><a href="###"><img src="images/20.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+            <li><a href="###"><img src="images/21.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+            <li><a href="###"><img src="images/22.png" alt=""><span>英国妈妈不给孩子看电视英国妈妈不给孩子看电视英国妈妈不给孩子看电视 家长去择校展一定带上娃</span></a></li>
+        </ul>
+    </div>
+    <div class="index-news-list">
+        <h3><img src="images/8.png" alt=""></h3>
+        <ul>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+            <li><a href="###">山东开发建设的房价快速的减肥是肯德基方式可点击付款就收到</a></li>
+        </ul>
+    </div>
+</div>
+<div class="border">
+    <img src="images/6.png" alt="">
+</div>
+<div class="index-about">
+    <div class="concact-we">
+        <!--<h3>客户服务</h3>-->
+        <!--<ul>-->
+            <!--<li>24小时全国服务热线：400-100-9425</li>-->
+            <!--<li>客户服务邮箱： cailinsen@ dasenlinyun.com</li>-->
+            <!--<li>地址：鼓楼区中山北路333号盐仓桥广场中山骏景大山614室</li>-->
+            <!--<li>电话：025-58571392</li>-->
+            <!--<li>企业口号：专注教育科技  提供创新服务</li>-->
+        <!--</ul>-->
+    </div>
+    <div class="partner">
+        <ul>
+            <li>中兴智联科技有限公司</li>
+            <li>南京大学</li>
+            <li>江苏省心理协会</li>
+            <li>南京师范大学</li>
+            <li>江苏教育报刊总社</li>
+            <li>江苏省演艺集团</li>
+            <li>江苏百米乐信息科技有限公司</li>
+            <li>安徽亚信通信息科技有限公司</li>
+            <li>南京江城文化传播有限公司</li>
+            <li>南京龙瑞装饰工程有限公司</li>
+            <li>南京金远信信息科技技术有限公司</li>
+        </ul>
+    </div>
+</div>
 <div class="footer">
     <div class="footer-more">
-         <div class="footer-more-l">
-             <a href="###">网站首页</a><a href="###">关于我们</a><a href="###">技术支持</a><a href="###">联系我们</a>
-         </div>
+        <div class="footer-more-l">
+            <a href="###">网站首页</a><a href="###">关于我们</a><a href="###">技术支持</a><a href="###">联系我们</a>
+        </div>
         <div class="footer-more-r">
             <p>24小时全国服务热线：400-100-9425&nbsp;&nbsp;&nbsp;地址：鼓楼区中山北路333号盐仓桥广场中山骏景大山614室</p>
             <p>版权所有：大森林信息技术有限公司 </p>
         </div>
     </div>
 </div>
+<script>
+    $(function () {
+        $('.index-product-list>ul>li').click(function () {
+            if($(this).find('.index-product-list-main').is(":visible")){
+            }else {
+                $('.index-product-list>ul>li').find('.index-product-list-main').slideUp();
+                $(this).find('.index-product-list-main').slideDown();;
+            }
+        });
+//限制字符个数
+            $('.index-case-list ul li span').each(function(){
+                var maxwidth=34;
+                if($(this).text().length>maxwidth){
+                    $(this).text($(this).text().substring(0,maxwidth));
+                    $(this).html($(this).html()+'...');
+                }
+            });
+    })
+</script>
 </body>
 </html>
